@@ -4,7 +4,7 @@
 
 <h2><div align="center"> <strong> OVERVIEW </strong></div></h2>
 
-<div align="justify">This repository contains an <strong>Exploratory Data Analysis (EDA) of the Most Streamed Spotify Songs of 2023 dataset</strong>. <br><br> This analysis aims to explore, visualize, and interpret key factors influencing track popularity. By examining trends, patterns, and relationships between musical attributes, artist performance, and other various characteristics, this analysis aims to provide valuable insights into the dynamics of popular music in today's world. <br><br> The findings aim to offer a deeper understanding of the current music landscape and shed light on potential future trends in the industry.</div>
+<div align="justify">This repository contains an <strong>Exploratory Data Analysis (EDA) of the Most Streamed Spotify Songs of 2023</strong>. <br><br> This analysis aims to explore, visualize, and interpret key factors influencing track popularity. By examining trends, patterns, and relationships between musical attributes, artist performance, and other various characteristics, this analysis aims to provide valuable insights into the dynamics of popular music in today's world. <br><br> The findings aim to offer a deeper understanding of the current music landscape and shed light on potential future trends in the industry.</div>
 
 ************************************************************************************************
 
@@ -38,7 +38,7 @@
     import matplotlib.pyplot as plt
     import seaborn as sns
     
-*Then, **import the dataset**.*
+*Then, **import the dataset** of the Most Streamed Spotify Songs in 2023 <br> (https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023)*
     
     sptfy23 = pd.read_excel('spotify-2023.xlsx') #convert csv to xlsx
     sptfy23
@@ -53,10 +53,10 @@
 <div align="center"><ins><strong> OVERVIEW OF DATASET </strong></ins></div><br> 
 
 ****Objective:**** 
-- Understand the basic structure of the dataset and identify any potential data quality issues. 
+> - Understand the basic structure of the dataset and identify any potential data quality issues. 
 
 ****Task:**** 
--  In this section, we will explore the dataset’s dimensions (rows and columns) and data types. We will also check for any missing values and address them as needed.
+> - In this section, we will explore the dataset’s dimensions (rows and columns) and data types. We will also check for any missing values and address them as needed.
 
 <br>
 
@@ -116,10 +116,10 @@
 <div align="center"><ins><strong> BASIC DESCRIPTIVE STATISTICS </strong></ins></div><br>
 
 ****Objective:****
-- Calculate key summary statistics and understand the distribution of critical variables.
+> - Calculate key summary statistics and understand the distribution of critical variables.
 
 ****Task:**** 
-- In this section, we will compute the mean, median, and standard deviation for the streams column and examine the distribution of released_year and artist_count, which can identify any trends or outliers that might impact our analysis.
+> - In this section, we will compute the mean, median, and standard deviation for the streams column and examine the distribution of released_year and artist_count, which can identify any trends or outliers that might impact our analysis.
 
 <br> 
 
@@ -250,10 +250,10 @@
 <div align="center"><ins><strong> TOP PERFORMERS </strong></ins></div><br>
 
 ****Objective:****
-- Identify the tracks and artists that perform the best in terms of streaming numbers.
+> - Identify the tracks and artists that perform the best in terms of streaming numbers.
   
 ****Task:**** 
-- In this section, we will find the track with highest number of streams, display the top 5 most streamed tracks, and identify the top 5 most frequent artists based on the number of their tracks in the dataset to see which artists dominate the 2023 Spotify scene.
+> - In this section, we will find the track with highest number of streams, display the top 5 most streamed tracks, and identify the top 5 most frequent artists based on the number of their tracks in the dataset > to see which artists dominate the 2023 Spotify scene.
 
 <br>
 
@@ -330,10 +330,10 @@
 <div align="center"><ins><strong> TEMPORAL TRENDS </strong></ins></div><br>
 
 ****Objective:****
-- Analyze how the number of tracks and their release patterns change over time.
+> - Analyze how the number of tracks and their release patterns change over time.
 
 ****Task:**** 
-- In this section, we will explore the trends in the number of tracks released over the years as well as analyze monthly release patterns, identifying any peaks or shifts in the music industry. 
+> - In this section, we will explore the trends in the number of tracks released over the years as well as analyze monthly release patterns, identifying any peaks or shifts in the music industry. 
 
 <br>
 
@@ -405,10 +405,10 @@
 <div align="center"><ins><strong> GENRE AND MUSIC CHARACTERISTICS </strong></ins></div><br>
 
 ****Objective:****
-- Explore the relationship between musical attributes and track popularity.
+> - Explore the relationship between musical attributes and track popularity.
 
 ****Task:**** 
-- In this section, we will examine the correlations between various musical attributes and how they influence the number of streams to better understand the factors driving a track's success. 
+> - In this section, we will examine the correlations between various musical attributes and how they influence the number of streams to better understand the factors driving a track's success. 
 
 <br>
 
@@ -426,6 +426,7 @@
                     'acousticness_%', 'instrumentalness_%', 'liveness_%', 'speechiness_%']
       
       for i, attribute in enumerate(attributes, 1): #iterate through each attribute in the list
+      
           plt.subplot(4, 2, i)
           sns.scatterplot(data=sptfy23, x=attribute, y='streams', alpha=0.6)
           plt.title(f"Streams vs {attribute}")
@@ -484,10 +485,10 @@
 <div align="center"><ins><strong> PLATFORM POPULARITY </strong></ins></div><br>
 
 ****Objective:****
-- Compare track representation across different music platforms. 
+> - Compare track representation across different music platforms. 
 
 ****Task:**** 
-- In this section, we will analyze how tracks are distributed across platforms like Spotify Playlists, Spotify Charts, and Apple Playlists which will help identify which platform favors the most popular tracks.
+> - In this section, we will analyze how tracks are distributed across platforms like Spotify Playlists, Spotify Charts, and Apple Playlists which will help identify which platform favors the most popular tracks.
 
 <br>
 
@@ -497,14 +498,18 @@
 
       def convertion(columns):
           for col in columns: #iterate over each column 
+          
               sptfy23[col] = pd.to_numeric(sptfy23[col], errors='coerce') #convert to numeric; 
               set non-numeric entries to NaN
+              
               sptfy23.dropna(subset=[col], inplace=True) #remove rows with non-numeric entries 
               (NaN)
+              
               sptfy23[col] = sptfy23[col].astype('int64') #convert the data to int64
       
       #store the list of columns to be converted in 'cols'
       cols = ['in_spotify_playlists', 'in_apple_playlists', 'in_deezer_playlists'] 
+      
       convertion(cols) #call the function
       
       sptfy23.dtypes  #display the converted data types of each cols
@@ -519,6 +524,7 @@
 
       #create a list of all the playlist names to be analyzed
       playlists = ['in_spotify_playlists', 'in_apple_playlists', 'in_deezer_playlists']
+      
       #create a dictionary where the keys=names of the playlist and the value=total sum of 
       tracks there
       tracks = {platform: sptfy23[platform].sum() for platform in playlists}
@@ -551,12 +557,14 @@
 
       #sort the values of 'high_streams' in descending order
       high_streams = sptfy23.sort_values(by='streams', ascending=False)
+      
       #only take the first 5 highest tracks
       top_tracks = high_streams.head()
       
       #create a dictionary where the keys=names of the playlist and the value=total sum of 
       tracks there
       track_counts = {platform: top_tracks[platform].sum() for platform in playlists}
+      
       #convert the dictionary into a dataframe 
       popular_tracks = pd.DataFrame(track_counts.items(), columns=['platform', 'track_counts'])
       
@@ -585,10 +593,10 @@
 <div align="center"><ins><strong> ADVANCED ANALYSIS </strong></ins></div><br>
 
 ****Objective:****
-- Conduct a deeper analysis of track characteristics and their presence in playlists or charts. 
+> - Conduct a deeper analysis of track characteristics and their presence in playlists or charts. 
 
 ****Task:**** 
-- In this section, we will examine patterns related to the musical key and mode (Major vs. Minor) and its correlation with streams. We will also explore if certain artists are more likely to appear in playlists or charts, helping to analyze who are the most frequently appearing ones in both platforms.
+> - In this section, we will examine patterns related to the musical key and mode (Major vs. Minor) and its correlation with streams. We will also explore if certain artists are more likely to appear in playlists or charts, helping to analyze who are the most frequently appearing ones in both platforms.
 
 <br>
 
@@ -600,6 +608,7 @@
 
       #group the values by 'key' and calculate the mean for each
       average_streams_by_key = sptfy23.groupby('key')['streams'].mean()
+      
       #sort in descending order
       average_streams_by_key.sort_values(ascending=False)
       
@@ -627,6 +636,7 @@
 
       #group the values by 'mode' and calculate the mean for each
       average_streams_by_mode = sptfy23.groupby('mode')['streams'].mean()
+      
       #sort in descending order
       average_streams_by_mode.sort_values(ascending=False)
       
@@ -668,10 +678,12 @@
       plt.subplots_adjust(top=0.9, hspace=8) 
       
       for ix, playlist in enumerate(playlists):  #iterate through each playlist in the list
+      
           #group the data by artist name, find the total sum, and sort descendingly
           spotify_sub = 
           spotify_exploded.groupby('artist(s)_name').sum(playlist).sort_values(playlist, 
           ascending=False).reset_index()
+          
           #create the barplot
           sns.barplot(x='artist(s)_name', y=playlist, data=spotify_sub.head(10), ax=axes[ix])
       
@@ -704,8 +716,10 @@
       plt.subplots_adjust(top=0.9, hspace=8) 
       
       for ix, chart in enumerate(charts): #iterate through each charts in the list
+      
           #group the data by artist name, find the total sum, and sort descendingly
           spotify_sub = spotify_exploded.groupby('artist(s)_name').sum(chart).sort_values(chart, ascending=False).reset_index()
+          
           #create the barplot
           sns.barplot(x='artist(s)_name', y=chart, data=spotify_sub.head(10), ax=axes[ix])
       
@@ -726,17 +740,12 @@
 ![image](https://github.com/user-attachments/assets/9d3ac67f-cbec-48fc-8b87-5b493a002731)
 
 
-
-
-
-
-
 ****Analysis:****
 
 ============================================================================================
 
 ************************************************************************************************
-<h2><div align="center"><strong> INSIGHTS AND RECOMMENDATIONS </strong></div></h2>
+<h2><div align="center"><strong> CONCLUSION </strong></div></h2>
 
 
 

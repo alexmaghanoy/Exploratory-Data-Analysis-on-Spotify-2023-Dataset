@@ -74,6 +74,8 @@
 
 ![image](https://github.com/user-attachments/assets/ea4f2d18-9c48-4b2c-823f-6cb1781c6254)
 
+<br>
+
 > ****Analysis:**** The dataset contains 952 rows and 24 columns.
 
 <br>
@@ -87,6 +89,8 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/2b7ac214-8674-4432-be09-c31a2a1ce5c7)
+
+<br>
 
 > ****Analysis:**** The dataset includes a mix of datatypes: object, int64, and float64.
 
@@ -114,7 +118,11 @@
 
 ![image](https://github.com/user-attachments/assets/fdfecd38-59a0-4ebe-aa20-71a9a9e53ec1)
 
+<br>
+
 > ****Analysis:**** Only two columns have missing values, **"Shazam Charts"** has <ins>50 missing values</ins> (5.25% of total entries) and **"Key"** has <ins>95 missing values</ins> (9.97%).
+
+<br>
 
 ============================================================================================
 
@@ -173,6 +181,8 @@
 
 ![image](https://github.com/user-attachments/assets/5ed8da13-5927-477b-a8eb-30c3601d7181)
 
+<br>
+
 > ****Analysis:**** The **"Streams"** column shows values of **mean** = 514,137,425, **median** = 290,530,915, and **standard deviation** = 566,856,949.
 
 <br>
@@ -191,17 +201,19 @@
     plt.xlabel("Release Year")
     plt.ylabel("Count")
 
-    #boxplot of released year
-    plt.subplot(2,2,2)
-    sns.boxplot(sptfy23['released_year'])
-    plt.title("Distribution of Release Years using Boxplot")
-    plt.ylabel("Release Year")
+    #display the graphs
+    plt.tight_layout()
+    plt.show()
     
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/c731e8c6-bf11-461e-9d47-648188984a42)
 
+<br>
+
 > ****Analysis:**** Most songs in the dataset are from recent years (2010s onward), showing steady growth over time.
+
+<br>
 
 <h5>For Artist Count:</h5>
 
@@ -211,7 +223,25 @@
     plt.title("Distribution of Artist Count using Histogram")
     plt.xlabel("Artist Count")
     plt.ylabel("Count")
-    
+
+    #display the graphs
+    plt.tight_layout()
+    plt.show()
+
+<h5><em><ins> Output </ins></em></h5>
+
+![image](https://github.com/user-attachments/assets/8916c616-3fc9-461f-b549-99c0393166b8)
+
+<br>
+
+> ****Analysis:**** Most tracks feature solo artists, though collaborations with 2-3 artists are also common.
+
+<br> 
+
+*<strong>4.2. </strong> <ins>Are there any noticeable trends or outliers?</ins>*
+
+<h5>For Released Year:</h5>
+
     #boxplot of artist count
     plt.subplot(2,2,4)
     sns.boxplot(sptfy23['artist_count'])
@@ -224,43 +254,35 @@
 
 <h5><em><ins> Output </ins></em></h5>
 
-![image](https://github.com/user-attachments/assets/8916c616-3fc9-461f-b549-99c0393166b8)
-
-> ****Analysis:**** Most tracks feature solo artists, though collaborations with 2-3 artists are also common.
-
-<br> 
-
-*<strong>4.2. </strong> <ins>Are there any noticeable trends or outliers?</ins>*
-
-<h5>For Released Year:</h5>
-
-    #create a summary of the statistics for 'released_year'
-    released_year_stats = sptfy23['released_year'].describe()
-    
-    #display the results
-    print("Released Year")
-    print(released_year_stats)
-
-<h5><em><ins> Output </ins></em></h5>
-
 ![image](https://github.com/user-attachments/assets/4a96c1aa-68cc-4b3a-812d-663738389e3d)
+
+<br>
 
 > ****Analysis:**** The boxplot reveals many outliers, which gradually decrease as we move from the 2020s back to the 1900s.
 
+<br>
+
 <h5>For Artist Count:</h5>
 
-    #create a summary of the statistics for 'artist_count'
-    artist_count_stats = sptfy23['artist_count'].describe()
-    
-    #display results
-    print("Artist Count")
-    print(artist_count_stats)
+    #boxplot of artist count
+    plt.subplot(2,2,4)
+    sns.boxplot(sptfy23['artist_count'])
+    plt.title("Distribution of Artist Count using Boxplot")
+    plt.ylabel("Artist Count")
+
+    #display the graphs
+    plt.tight_layout()
+    plt.show()
 
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/d3f4d938-df0d-49df-89f5-d2967a3bdbd9)
 
+<br>
+
 > ****Analysis:**** The boxplot shows solo tracks are most frequent, followed by duos and trios, yet there are a few outliers with 4-8 artists collaborating, though they are less common.
+
+<br>
 
 ============================================================================================
   
@@ -311,6 +333,8 @@
 
 ![image](https://github.com/user-attachments/assets/67c66388-8108-46bb-9704-5b0332f2f58a)
 
+<br>
+
 > ****Analysis:**** The top 5 most-streamed tracks of 2023 are "Blinding Lights," "Shape of You," "Someone You Loved," "Dance Monkey," and "Sunflower (Spider-Man: Into the Spider-Verse)," with streams between 2.8 billion and 3.7 billion.
 
 <br>
@@ -341,7 +365,11 @@
 
 ![image](https://github.com/user-attachments/assets/0072314f-52df-48c3-b5d8-19464d17aeaf)
 
+<br>
+
 > ****Analysis:**** The top 5 most frequent artists in 2023 are Bad Bunny, Taylor Swift, The Weeknd, SZA, and Kendrick Lamar, with tracks ranging from 23 to 40 each.
+
+<br>
 
 ============================================================================================
 
@@ -387,6 +415,8 @@
 
 ![image](https://github.com/user-attachments/assets/5af0b72c-8fd8-4315-9533-af14eece72a7)
 
+<br>
+
 > ****Analysis:**** The number of tracks released per year rose significantly in recent years, peaking at 402 in 2022. In 2023, the count dropped to 175. This seems unlikely if we follow the trend of te plot. Thus, this inconsistency might be due to the dataset being compiled mid-year and the latter part was not recorded, affecting the data significantly.
 
 <br>
@@ -421,7 +451,11 @@
 
 ![image](https://github.com/user-attachments/assets/68387e57-fc52-44f9-a7af-fe02c1fe78cf)
 
+<br>
+
 > ****Analysis:**** The number of tracks released per month shows that January and May have the highest track releases, while August has the fewest. The number of tracks per month is scattered without a clear seasonal trend.
+
+<br>
 
 ============================================================================================
 
@@ -530,6 +564,8 @@
 
 ![image](https://github.com/user-attachments/assets/7608eccc-ae4e-4f1f-a085-fa296c5bf9de)
 
+<br>
+
 > ****Analysis:**** Danceability and energy show a positive correlation, indicating that highly danceable songs are often high-energy, a common trait in pop and electronic music.
 
 <br>
@@ -550,7 +586,11 @@
 
 ![image](https://github.com/user-attachments/assets/6afa71e7-0d95-4420-a8ba-4cf2b5ed330c)
 
+<br>
+
 > ****Analysis:**** Valence and acousticness show no strong correlation, suggesting that both acoustic and electronic songs can be either upbeat or somber.
+
+<br>
 
 ============================================================================================
 
@@ -622,6 +662,8 @@
 
 ![image](https://github.com/user-attachments/assets/55c49e57-edc4-461d-bdee-e08c994e7b01)
 
+<br>
+
 > ****Analysis:**** Spotify has the most tracks, followed by Deezer and then Apple, with 4,952,842, 367,030, and 64,609 tracks respectively.
 
 <br>
@@ -659,7 +701,11 @@
 
 ![image](https://github.com/user-attachments/assets/865585f9-c1ac-4c0d-ab09-dd2c0c765920)
 
+<br>
+
 > ****Analysis:**** Spotify hosts the most popular tracks, followed by Deezer and Apple, with 142,539, 16,467, and 2,050 tracks respectively.
+
+<br>
 
 ============================================================================================
 
@@ -705,6 +751,8 @@
 
 ![image](https://github.com/user-attachments/assets/0450b580-f6f0-43f1-a04c-175d9286d7ac)
 
+<br>
+
 > ****Analysis:**** In the key of C#, both track count and average streams are highest, suggesting it’s a popular choice that also performs well. E is the next most successful key despite fewer tracks. Keys like G# and G have many tracks but lower average streams, suggesting they’re used frequently but are less associated with hits.
 
 <br>
@@ -736,6 +784,8 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/12d06be0-8cff-4d76-b9a0-ddbd8759e633)
+
+<br>
 
 > ****Analysis:**** Songs in major modes tend to have higher streams and counts than minor ones, suggesting a preference for happier or more uplifting sounds. However, minor-key (somber) songs also maintain substantial popularity.
 
@@ -779,6 +829,8 @@
 ![image](https://github.com/user-attachments/assets/5ba54967-b6e8-4b8f-8733-3159fe064af1)
 ![image](https://github.com/user-attachments/assets/1cd1681e-c79a-44f8-92f6-858cd5bb6f57)
 
+<br>
+
 > ****Analysis:**** The Weeknd ranks highest on Spotify and Apple playlists, though Eminem leads on Deezer and ranks second on Spotify. The Weeknd and Ed Sheeran are the only artists in the top 10 on all three platforms.
 
 <br>
@@ -820,21 +872,50 @@
 ![image](https://github.com/user-attachments/assets/4681bc1c-4ae2-4099-840e-12d0fbf4687a)
 ![image](https://github.com/user-attachments/assets/9d3ac67f-cbec-48fc-8b87-5b493a002731)
 
+<br>
+
 > ****Analysis:**** The Weeknd and Bad Bunny top multiple charts, with The Weeknd leading on Apple and Shazam, while Bad Bunny leading on Spotify and Deezer. Both artists appear across all platforms, demonstrating their widespread appeal.
 
 <br>
 
 ************************************************************************************************
+
 <h2><div align="center"><strong> CONCLUSION </strong></div></h2><br>
 
+Through this analysis, we gained a comprehensive view of the factors contributing to a track's popularity on streaming platforms. 
 
+<strong><ins>Insights</strong></ins>
+
+**1. Release Trends and Streaming Numbers:**
+- Tracks from recent years dominate the dataset, reflecting the growing presence of digital platforms and the rise of music streaming. The peak in 2022 suggests significant music industry activity, though the data for 2023 may be incomplete. Popular tracks also frequently come from solo artists, though collaborations are rising, possibly due to their appeal across multiple fanbases.
+
+**2. Music Characteristics and Popularity:** 
+- Despite some assumptions that certain musical attributes might heavily influence popularity, our findings reveal that BPM, danceability, energy, and valence alone do not strongly dictate streaming numbers. However, tracks with low acousticness, low instrumentalness, and lower speechiness are generally more popular, indicating a preference for melodic, vocal-driven, and electronically produced music. This preference aligns with trends in pop and hip-hop, where production quality and lyrical content are often prioritized.
+
+**3. Music Platform Popularity:** 
+- Spotify leads in hosting popular tracks, which may be attributed to its extensive library and global user base. Artists with widespread appeal, like The Weeknd and Bad Bunny, consistently top both playlists and charts on multiple platforms, suggesting that cross-platform visibility plays a role in maintaining popularity.
+
+**4. Genre, Key, and Mode Preferences:** 
+- Certain musical keys, particularly C# and E, are associated with high-performing tracks, possibly due to their frequency in popular genres like pop and hip-hop. Major modes appear slightly more popular than minor, aligning with a general listener preference for upbeat or “feel-good” music, though minor-key songs are still highly relevant and can resonate deeply with audiences.
+
+<strong><ins>Recommendations:</strong></ins>
+
+> The analysis reveals that popular tracks are highly produced, vocal-driven, and melodic, with lower acoustics, instrumentals, and speeches. This aligns with the preference for high-energy, danceable songs commonly found in pop and electronic music genres. Established artists like The Weeknd, Bad Bunny, and Taylor Swift dominate across platforms, indicating that an artist's reputation plays a key role in track success. Spotify stands out as the leading platform for popular music discovery, followed by Deezer, Apple, and Shazam. 
+
+- Therefore, to enhance audience reach, record labels and artists could focus on producing energetic, danceable tracks and leverage Spotify’s platform and high-profile artist collaborations.
+
+<br> **In summary**, while individual attributes alone do not strongly correlate with popularity, broader trends such as production quality, artist reach, and platform visibility play a significant role in determining what makes a track popular.
+
+<br>
 
 ************************************************************************************************
+
 <h2><div align="center"><strong> AUTHOR </strong></div></h2>
 
 <h4><div align="center"><strong> Alesandra Joyce P. Maghanoy </strong></div></h4>
 
 ************************************************************************************************
+
 
 
 

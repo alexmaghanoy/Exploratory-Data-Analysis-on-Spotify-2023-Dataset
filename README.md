@@ -347,7 +347,7 @@
 
 ![image](https://github.com/user-attachments/assets/0072314f-52df-48c3-b5d8-19464d17aeaf)
 
-> ****Analysis:**** The top 5 most frequent artists in 2023 are Bad Bunny, Taylor Swift, The Weeknd, SZA, and Kendrick Lamar, with tracks ranging from 23 to 40 each.
+> ****Analysis:**** The top 5 most frequent artists in 2023 are Bad Bunny, Taylor Swift, The Weeknd, SZA, and Kendrick Lamar, with tracks ranging from 23 to 40.
 
 <br>
 
@@ -395,11 +395,11 @@
 
 ![image](https://github.com/user-attachments/assets/5af0b72c-8fd8-4315-9533-af14eece72a7)
 
-> ****Analysis:**** The number of tracks released per year rose significantly in recent years, peaking at 402 in 2022. In 2023, the count dropped to 175. This seems unlikely if we follow the trend of te plot. Thus, this inconsistency might be due to the dataset being compiled mid-year and the latter part was not recorded, affecting the data significantly.
+> ****Analysis:**** The number of tracks released per year rose significantly in recent years, peaking at 402 in 2022. In 2023, the count dropped to 175. This seems unlikely if we follow the trend of the plot. Thus, this inconsistency might be due to the dataset being compiled mid-year and the latter part was not recorded, affecting the data significantly.
 
 <br>
 
-*<strong>8. </strong> <ins>This time, does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?</ins>*
+*<strong>8. </strong> <ins>Does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?</ins>*
 
 *First, let's **analyze** this  data:* 
 
@@ -474,31 +474,31 @@
 
 ![image](https://github.com/user-attachments/assets/5b26fc58-f637-4776-85db-83d18f2f0fed)
 
-> **For BPM:** There’s no strong correlation between BPM and streams, indicating that tempo alone doesn’t heavily impact a song’s popularity.
+> **For BPM:** There is no strong correlation between BPM and streams, indicating that tempo alone does not heavily impact a song’s popularity.
 
 <br>
 
 ![image](https://github.com/user-attachments/assets/ed0f9504-0214-4d6e-9838-9cff0f568451)
 
-> **For Danceability:** Danceability doesn’t show a clear relationship with streams, suggesting it’s not a key factor in popularity.
+> **For Danceability:** Danceability doesn’t show a clear relationship with streams, suggesting it is not a key factor in its success.
 
 <br>
 
 ![image](https://github.com/user-attachments/assets/4b1e29ba-c001-48ce-980b-b94af7bb72f1)
 
-> **For Valence:** Streams are spread across low and high valence, meaning that a song’s mood isn’t strongly tied to popularity.
+> **For Valence:** Streams are spread across low and high valence, meaning that a song’s mood is not strongly tied to popularity and that listeners seem to enjoy a variety of emotional tones (happy, sad, etc.).
 
 <br>
 
 ![image](https://github.com/user-attachments/assets/ffe33dd0-4903-4824-bbec-2e77bc1bbb6e)
 
-> **For Energy:** Energy levels show no clear pattern with streams; both low- and high-energy songs achieve similar popularity.
+> **For Energy:** Energy levels show no clear pattern with streams; both low and high energy songs achieve similar popularity.
 
 <br>
 
 ![image](https://github.com/user-attachments/assets/54cb3736-61f5-4abb-85bf-3f5ff111a674)
 
-> **For Acousticness:** Lower acousticness tends to correlate with higher streams, suggesting listeners prefer more electronic or highly produced songs.
+> **For Acousticness:** Lower acousticness tends to correlate with higher streams, suggesting listeners prefer more electronic or highly produced songs than acoustic ones.
 
 <br>
 
@@ -516,11 +516,11 @@
 
 ![image](https://github.com/user-attachments/assets/5c7eda2f-f311-4b39-9a9c-d73af720a13f)
 
-> **For Speechiness:** Songs with low speechiness (less spoken-word content) generally have higher streams, suggesting a listener preference for melodic tracks.
+> **For Speechiness:** Songs with low speechiness (less spoken-word content such as rap) generally have higher streams, suggesting a listener preference for melodic tracks.
 
 <br>
 
-> **Overall**, there are few strong correlations between musical attributes like BPM, danceability, valence, energy, and liveness with streaming popularity. However, low instrumentalness, lower acousticness, and lower speechiness may slightly favor higher streams, indicating a preference for vocal-driven, less acoustic, and more melodic songs. Popularity likely depends on a mix of factors beyond these attributes, such as artist reputation and marketing.
+> **Overall**, there are few strong correlations between musical attributes like BPM, danceability, valence, energy, and liveness with streaming popularity. However, low instrumentalness, lower acousticness, and lower speechiness may slightly favor higher streams, indicating a preference for vocal-driven, less acoustic, and more melodic songs. 
 
 <br>
 
@@ -719,7 +719,7 @@
 
 ![image](https://github.com/user-attachments/assets/0450b580-f6f0-43f1-a04c-175d9286d7ac)
 
-> ****Analysis:**** In the key of C#, both track count and average streams are highest, suggesting it’s a popular choice that also performs well. E is the next most successful key despite fewer tracks. Keys like G# and G have many tracks but lower average streams, suggesting they’re used frequently but are less associated with hits.
+> ****Analysis:**** We can observe that **C#** stands out both in terms of having the highest number of tracks (120) and average stream counts (604,280,249). This suggests that not only is C# a popular key for songwriters, but tracks in this key are also consistently popular among listeners. Meanwhile, **E** has the second highest average stream count, despite having only 62 tracks. This could mean that while not as commonly used, this key tends to produce hits when it is. On the other hand, **G#** (96 tracks) and **G** (91 tracks) have a high number of tracks but did not achieve the same level of average streams as C# or E. This suggests that although these keys are frequently used, they might not be associated with as many hit songs or high-engagement tracks. Meanwhile, keys with fewer tracks, such as **D#** (33 tracks) and **A#** (57 tracks), have a high average stream count, suggesting that while these keys are less common, they might be associated with distinctive or high-quality songs that resonate well with listeners. 
 
 <br>
 

@@ -516,11 +516,11 @@
 
 ![image](https://github.com/user-attachments/assets/5c7eda2f-f311-4b39-9a9c-d73af720a13f)
 
-> **For Speechiness:** Songs with low speechiness (less spoken-word content such as rap) generally have higher streams, suggesting a listener preference for melodic tracks.
+> **For Speechiness:** Songs with low speechiness (less spoken-word (such as rap) content) generally have higher streams, suggesting a listener preference for melodic tracks.
 
 <br>
 
-> **Overall**, there are few strong correlations between musical attributes like BPM, danceability, valence, energy, and liveness with streaming popularity. However, low instrumentalness, lower acousticness, and lower speechiness may slightly favor higher streams, indicating a preference for vocal-driven, less acoustic, and more melodic songs. 
+> **Overall**, there are little-to-no strong correlations between musical attributes like BPM, danceability, valence, energy, and liveness with streaming popularity. However, low instrumentalness, lower acousticness, and lower speechiness have slightly higher average streams, indicating a listener's preference for vocal-driven, less acoustic, and more melodic songs. 
 
 <br>
 

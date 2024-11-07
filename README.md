@@ -8,7 +8,7 @@
 
 ************************************************************************************************
 
-<h2><div align="center"> <strong> GENERAL GUIDELINES </strong></div></h2>
+<h2><div align="center"> <strong> GENERAL GUIDELINES </strong></div></h2><br>
 
 **1. Dataset Exploration:** 
 - Begin by familiarizing yourself with the structure of the dataset. Check for missing values and data types, and perform an initial exploration to understand the different features available.
@@ -25,11 +25,11 @@
 **5. Insights and Recommendation:** 
 - Based on your analysis, offer any insights or recommendations regarding the tracks, artists, or musical trends that could be useful for understanding what makes a track popular.
 
+<br>
+
 ************************************************************************************************
 
-<h2><div align="center"> <strong> INTRODUCING THE DATASET </strong></div></h2>
-
-****Code Proper:**** 
+<h2><div align="center"> <strong> INTRODUCING THE DATASET </strong></div></h2><br>
 
 *First, **import the libraries** needed.*
    
@@ -37,6 +37,8 @@
     import pandas as pd
     import matplotlib.pyplot as plt
     import seaborn as sns
+
+<br> 
     
 *Then, **import the dataset** of the Most Streamed Spotify Songs in 2023 <br> (https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023)*
     
@@ -48,7 +50,7 @@
 
 ************************************************************************************************
 
-<h2><div align="center"><strong> GUIDE QUESTIONS </strong></div></h2>
+<h2><div align="center"><strong> GUIDE QUESTIONS </strong></div></h2><br>
 
 <div align="center"><ins><strong> OVERVIEW OF DATASET </strong></ins></div><br> 
 
@@ -56,7 +58,7 @@
 > - Understand the basic structure of the dataset and identify any potential data quality issues. 
 
 ****Task:**** 
-> - In this section, we will explore the dataset’s dimensions (rows and columns) and data types. We will also check for any missing values and address them as needed.
+> - In this section, we will explore the dataset’s dimensions (rows and columns), datatypes, and check for any missing values.
 
 <br>
 
@@ -68,9 +70,11 @@
     dimension = sptfy23.shape
     dimension
     
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/ea4f2d18-9c48-4b2c-823f-6cb1781c6254)
+
+****Analysis:****
 
 <br>
 
@@ -80,9 +84,11 @@
     datatype = sptfy23.dtypes
     datatype
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/2b7ac214-8674-4432-be09-c31a2a1ce5c7)
+
+****Analysis:****
 
 <br>
 
@@ -104,10 +110,9 @@
            
     missing_values(sptfy23) #call the function to display
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/fdfecd38-59a0-4ebe-aa20-71a9a9e53ec1)
-
 
 ****Analysis:****
 
@@ -115,7 +120,7 @@
 
 <div align="center"><ins><strong> BASIC DESCRIPTIVE STATISTICS </strong></ins></div><br>
 
-****Objective:****
+****Objective:**** 
 > - Calculate key summary statistics and understand the distribution of critical variables.
 
 ****Task:**** 
@@ -131,8 +136,7 @@
     
     for col in columns:  #iterate over each column
     
-        sptfy23[col] = pd.to_numeric(sptfy23[col], errors='coerce')  #convert to numeric; set non- 
-        numeric entries to NaN
+        sptfy23[col] = pd.to_numeric(sptfy23[col], errors='coerce')  #convert to numeric; set non-numeric entries to NaN
         
         sptfy23.dropna(subset=[col], inplace=True)  #remove rows with non-numeric entries (NaN)
         
@@ -143,6 +147,8 @@
     convertion(cols)  #call the function
 
     sptfy23.dtypes  #display the converted data types of each cols
+
+<br> 
 
 *Thus, if you will notice below, the datatype for **"streams"** is now changed from object to <ins>int64</ins>:*
 
@@ -163,15 +169,17 @@
     print("Median: ", streams_median)
     print("Standard Deviation: ", streams_std)
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/5ed8da13-5927-477b-a8eb-30c3601d7181)
+
+****Analysis:****
 
 <br>
 
 *<strong>4.1. </strong> <ins>What is the distribution of released_year and artist_count?</ins>*
 
-    #create a histogram and boxplot to show distribution
+    #create a histogram and boxplot to show distribution 
     plt.figure(figsize=(12,10))    
 
 <h5>For Released Year:</h5>
@@ -208,9 +216,11 @@
     plt.tight_layout()
     plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/6165c60c-a280-40ee-b65a-2a385e31f798)
+
+****Analysis:****
 
 <br> 
 
@@ -225,9 +235,11 @@
     print("Released Year")
     print(released_year_stats)
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/4af60042-1ff1-4fb1-89aa-aaf97645e3ae)
+
+****Analysis:****
 
 <h5>For Artist Count:</h5>
 
@@ -238,10 +250,9 @@
     print("Artist Count")
     print(artist_count_stats)
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/4c060d64-4590-4316-b6e5-55c861ed9557)
-
 
 ****Analysis:****
 
@@ -269,9 +280,11 @@
       #display the first five rows of the data set
       high_streams.head()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/10717936-7c29-4a12-b1a1-af4a5325a99e)
+
+<br> 
 
 *Then, let's **plot** it to better **visualize** it.*
 
@@ -288,16 +301,17 @@
       for i, (index, row) in enumerate(high_streams.head().iterrows(), start=1):
           print(f"{i}. {row['track_name']} with a total of {row['streams']} streams.")
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/67c66388-8108-46bb-9704-5b0332f2f58a)
+
+****Analysis:****
 
 <br>
 
 *<strong>6. </strong> <ins>Who are the top 5 most frequent artists based on the number of tracks in the dataset?</ins>*
 
-      #split 'artist(s)_name' to individual names of each artist for those who did 
-      collaborations
+      #split 'artist(s)_name' to individual names of each artist for those who did collaborations
       sptfy23['artist(s)_name'] = sptfy23['artist(s)_name'].str.split(', ') 
       spotify_exploded = sptfy23.explode('artist(s)_name')
       
@@ -317,13 +331,12 @@
       for i, (artist, count) in enumerate(top_artists.items(), start=1):
           print(f"{i}. {artist} with a total of {count} tracks.")
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/0072314f-52df-48c3-b5d8-19464d17aeaf)
 
-
-
 ****Analysis:****
+
 
 ============================================================================================
 
@@ -349,9 +362,11 @@
       #sort the values in descending order
       tracks_per_year.sort_values(ascending=False)
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/ade016b5-5277-4c7d-99fb-992ee887329d)
+
+<br> 
 
 *Then, let's **plot** it to better **visualize** the trends through the years.*
 
@@ -363,9 +378,11 @@
       plt.ylabel('Number of Tracks Released')
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/5af0b72c-8fd8-4315-9533-af14eece72a7)
+
+****Analysis:****
 
 <br>
 
@@ -379,9 +396,11 @@
       #sort the values in descending order
       tracks_per_month.sort_values(ascending=False)
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/8ef8fef2-aae3-4031-af30-e26bdf631b5c)
+
+<br> 
 
 *Then, let's **plot** it to better **visualize** the trends per month.*
 
@@ -393,11 +412,10 @@
       plt.ylabel('Number of Tracks Released')
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/68387e57-fc52-44f9-a7af-fe02c1fe78cf)
 
-      
 ****Analysis:****
 
 ============================================================================================
@@ -416,8 +434,7 @@
 
 *<strong>9. </strong> <ins>Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?</ins>*
 
-      #create a scatterplot to visualize the correlation between streams and each musical 
-      attributes
+      #create a scatterplot to visualize the correlation between streams and each musical attributes
       plt.figure(figsize=(15,15))    
       plt.suptitle('Correlation between Streams and Musical Attributes',fontsize=18)
       
@@ -436,16 +453,18 @@
       plt.tight_layout()
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/a660e2a1-08f9-4819-865f-8739da2b8b51)
 ![image](https://github.com/user-attachments/assets/777191e2-568a-4d65-b134-31948b99d53a)
+
+****Analysis:****
 
 <br>
 
 *<strong>10.1. </strong> <ins>Is there a correlation between danceability_% and energy_%?</ins>*
 
-      #create a scatterplot to visualize the correlation between danceability and enerrgy
+      #create a scatterplot to visualize the correlation between danceability and energy
       plt.figure(figsize=(6,3))    
       
       sns.scatterplot(data=sptfy23, x='danceability_%', y='energy_%', alpha=0.6)
@@ -455,9 +474,11 @@
       
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/7608eccc-ae4e-4f1f-a085-fa296c5bf9de)
+
+****Analysis:****
 
 <br>
 
@@ -473,10 +494,9 @@
       
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/6afa71e7-0d95-4420-a8ba-4cf2b5ed330c)
-
 
 ****Analysis:****
 
@@ -499,11 +519,9 @@
       def convertion(columns):
           for col in columns: #iterate over each column 
           
-              sptfy23[col] = pd.to_numeric(sptfy23[col], errors='coerce') #convert to numeric; 
-              set non-numeric entries to NaN
+              sptfy23[col] = pd.to_numeric(sptfy23[col], errors='coerce') #convert to numeric; set non-numeric entries to NaN
               
-              sptfy23.dropna(subset=[col], inplace=True) #remove rows with non-numeric entries 
-              (NaN)
+              sptfy23.dropna(subset=[col], inplace=True) #remove rows with non-numeric entries (NaN)
               
               sptfy23[col] = sptfy23[col].astype('int64') #convert the data to int64
       
@@ -513,6 +531,8 @@
       convertion(cols) #call the function
       
       sptfy23.dtypes  #display the converted data types of each cols
+
+<br> 
 
 *Thus, if you will notice below, the datatype for **"in_spotify_playlists", "in_apple_playlists", "in_deezer_playlists"** is now changed from object to <ins>int64</ins>:*
 
@@ -525,8 +545,7 @@
       #create a list of all the playlist names to be analyzed
       playlists = ['in_spotify_playlists', 'in_apple_playlists', 'in_deezer_playlists']
       
-      #create a dictionary where the keys=names of the playlist and the value=total sum of 
-      tracks there
+      #create a dictionary where the keys=names of the playlist and the value=total sum of tracks there
       tracks = {platform: sptfy23[platform].sum() for platform in playlists}
       
       #convert the dictionary into a dataframe 
@@ -547,10 +566,12 @@
       for i, (track, count) in enumerate(tracks.items(), start=1):
           print(f"{i}. {track} = {count} tracks")
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/55c49e57-edc4-461d-bdee-e08c994e7b01)
-      
+
+****Analysis:****
+
 <br>
 
 *<strong>11.2. </strong> <ins>Which platform seems to favor the most popular tracks?</ins>*
@@ -582,7 +603,7 @@
       for index, row in popular_tracks.iterrows():
           print(f"{row['platform']}: {row['track_counts']} tracks")
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/865585f9-c1ac-4c0d-ab09-dd2c0c765920)
 
@@ -628,9 +649,13 @@
       for i, (key, count) in enumerate(key_counts.items(), start=1):
           print(f"{i}. {key} - {count} tracks")
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/dcb644b4-eb5e-4753-96f0-931ebb0e923b)
+
+****Analysis:****
+
+<br>
 
 <h5>For Mode:</h5>
 
@@ -656,9 +681,11 @@
       for i, (mode, count) in enumerate(mode_counts.items(), start=1):
           print(f"{i}. {mode} - {count} tracks")
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/159f5234-ca84-4b43-b0f8-ff81d53f4e94)
+
+****Analysis:****
 
 <br>
 
@@ -680,9 +707,7 @@
       for ix, playlist in enumerate(playlists):  #iterate through each playlist in the list
       
           #group the data by artist name, find the total sum, and sort descendingly
-          spotify_sub = 
-          spotify_exploded.groupby('artist(s)_name').sum(playlist).sort_values(playlist, 
-          ascending=False).reset_index()
+          spotify_sub = spotify_exploded.groupby('artist(s)_name').sum(playlist).sort_values(playlist, ascending=False).reset_index()
           
           #create the barplot
           sns.barplot(x='artist(s)_name', y=playlist, data=spotify_sub.head(10), ax=axes[ix])
@@ -696,11 +721,15 @@
       plt.tight_layout()
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/6d93abb9-5c4d-428b-b039-e558d726bc39)
 ![image](https://github.com/user-attachments/assets/5ba54967-b6e8-4b8f-8733-3159fe064af1)
 ![image](https://github.com/user-attachments/assets/1cd1681e-c79a-44f8-92f6-858cd5bb6f57)
+
+****Analysis:****
+
+<br>
 
 <h5>For Charts:</h5>
 
@@ -732,20 +761,19 @@
       plt.tight_layout()
       plt.show()
 
-<h5><ins><em> Result: </em></ins></h5>
+<h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/5db9835c-6b1f-43f7-8e22-92defe7f7d18)
 ![image](https://github.com/user-attachments/assets/1b4fa689-fc4c-4e92-95de-0ccbb561e883)
 ![image](https://github.com/user-attachments/assets/4681bc1c-4ae2-4099-840e-12d0fbf4687a)
 ![image](https://github.com/user-attachments/assets/9d3ac67f-cbec-48fc-8b87-5b493a002731)
 
-
 ****Analysis:****
 
-============================================================================================
+<br>
 
 ************************************************************************************************
-<h2><div align="center"><strong> CONCLUSION </strong></div></h2>
+<h2><div align="center"><strong> CONCLUSION </strong></div></h2><br>
 
 
 

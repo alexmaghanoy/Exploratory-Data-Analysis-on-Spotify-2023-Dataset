@@ -74,8 +74,6 @@
 
 ![image](https://github.com/user-attachments/assets/ea4f2d18-9c48-4b2c-823f-6cb1781c6254)
 
-<br>
-
 > ****Analysis:**** The dataset contains 952 rows and 24 columns.
 
 <br>
@@ -89,8 +87,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/2b7ac214-8674-4432-be09-c31a2a1ce5c7)
-
-<br>
 
 > ****Analysis:**** The dataset includes a mix of datatypes: object, int64, and float64.
 
@@ -117,8 +113,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/fdfecd38-59a0-4ebe-aa20-71a9a9e53ec1)
-
-<br>
 
 > ****Analysis:**** Only two columns have missing values, **"Shazam Charts"** has <ins>50 missing values</ins> (5.25% of total entries) and **"Key"** has <ins>95 missing values</ins> (9.97%).
 
@@ -181,8 +175,6 @@
 
 ![image](https://github.com/user-attachments/assets/5ed8da13-5927-477b-a8eb-30c3601d7181)
 
-<br>
-
 > ****Analysis:**** The **"Streams"** column shows values of **mean** = 514,137,425, **median** = 290,530,915, and **standard deviation** = 566,856,949.
 
 <br>
@@ -209,8 +201,6 @@
 
 ![image](https://github.com/user-attachments/assets/c731e8c6-bf11-461e-9d47-648188984a42)
 
-<br>
-
 > ****Analysis:**** Most songs in the dataset are from recent years (2010s onward), showing steady growth over time.
 
 <br>
@@ -231,8 +221,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/8916c616-3fc9-461f-b549-99c0393166b8)
-
-<br>
 
 > ****Analysis:**** Most tracks feature solo artists, though collaborations with 2-3 artists are also common.
 
@@ -256,8 +244,6 @@
 
 ![image](https://github.com/user-attachments/assets/4a96c1aa-68cc-4b3a-812d-663738389e3d)
 
-<br>
-
 > ****Analysis:**** The boxplot reveals many outliers, which gradually decrease as we move from the 2020s back to the 1900s.
 
 <br>
@@ -277,8 +263,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/d3f4d938-df0d-49df-89f5-d2967a3bdbd9)
-
-<br>
 
 > ****Analysis:**** The boxplot shows solo tracks are most frequent, followed by duos and trios, yet there are a few outliers with 4-8 artists collaborating, though they are less common.
 
@@ -333,8 +317,6 @@
 
 ![image](https://github.com/user-attachments/assets/67c66388-8108-46bb-9704-5b0332f2f58a)
 
-<br>
-
 > ****Analysis:**** The top 5 most-streamed tracks of 2023 are "Blinding Lights," "Shape of You," "Someone You Loved," "Dance Monkey," and "Sunflower (Spider-Man: Into the Spider-Verse)," with streams between 2.8 billion and 3.7 billion.
 
 <br>
@@ -364,8 +346,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/0072314f-52df-48c3-b5d8-19464d17aeaf)
-
-<br>
 
 > ****Analysis:**** The top 5 most frequent artists in 2023 are Bad Bunny, Taylor Swift, The Weeknd, SZA, and Kendrick Lamar, with tracks ranging from 23 to 40 each.
 
@@ -415,8 +395,6 @@
 
 ![image](https://github.com/user-attachments/assets/5af0b72c-8fd8-4315-9533-af14eece72a7)
 
-<br>
-
 > ****Analysis:**** The number of tracks released per year rose significantly in recent years, peaking at 402 in 2022. In 2023, the count dropped to 175. This seems unlikely if we follow the trend of te plot. Thus, this inconsistency might be due to the dataset being compiled mid-year and the latter part was not recorded, affecting the data significantly.
 
 <br>
@@ -450,8 +428,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/68387e57-fc52-44f9-a7af-fe02c1fe78cf)
-
-<br>
 
 > ****Analysis:**** The number of tracks released per month shows that January and May have the highest track releases, while August has the fewest. The number of tracks per month is scattered without a clear seasonal trend.
 
@@ -544,7 +520,7 @@
 
 <br>
 
-> **Overall**, tere are few strong correlations between musical attributes like BPM, danceability, valence, energy, and liveness with streaming popularity. However, low instrumentalness, lower acousticness, and lower speechiness may slightly favor higher streams, indicating a preference for vocal-driven, less acoustic, and more melodic songs. Popularity likely depends on a mix of factors beyond these attributes, such as artist reputation and marketing.
+> **Overall**, there are few strong correlations between musical attributes like BPM, danceability, valence, energy, and liveness with streaming popularity. However, low instrumentalness, lower acousticness, and lower speechiness may slightly favor higher streams, indicating a preference for vocal-driven, less acoustic, and more melodic songs. Popularity likely depends on a mix of factors beyond these attributes, such as artist reputation and marketing.
 
 <br>
 
@@ -563,8 +539,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/7608eccc-ae4e-4f1f-a085-fa296c5bf9de)
-
-<br>
 
 > ****Analysis:**** Danceability and energy show a positive correlation, indicating that highly danceable songs are often high-energy, a common trait in pop and electronic music.
 
@@ -585,8 +559,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/6afa71e7-0d95-4420-a8ba-4cf2b5ed330c)
-
-<br>
 
 > ****Analysis:**** Valence and acousticness show no strong correlation, suggesting that both acoustic and electronic songs can be either upbeat or somber.
 
@@ -662,8 +634,6 @@
 
 ![image](https://github.com/user-attachments/assets/55c49e57-edc4-461d-bdee-e08c994e7b01)
 
-<br>
-
 > ****Analysis:**** Spotify has the most tracks, followed by Deezer and then Apple, with 4,952,842, 367,030, and 64,609 tracks respectively.
 
 <br>
@@ -700,8 +670,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/865585f9-c1ac-4c0d-ab09-dd2c0c765920)
-
-<br>
 
 > ****Analysis:**** Spotify hosts the most popular tracks, followed by Deezer and Apple, with 142,539, 16,467, and 2,050 tracks respectively.
 
@@ -751,8 +719,6 @@
 
 ![image](https://github.com/user-attachments/assets/0450b580-f6f0-43f1-a04c-175d9286d7ac)
 
-<br>
-
 > ****Analysis:**** In the key of C#, both track count and average streams are highest, suggesting it’s a popular choice that also performs well. E is the next most successful key despite fewer tracks. Keys like G# and G have many tracks but lower average streams, suggesting they’re used frequently but are less associated with hits.
 
 <br>
@@ -784,8 +750,6 @@
 <h5><em><ins> Output </ins></em></h5>
 
 ![image](https://github.com/user-attachments/assets/12d06be0-8cff-4d76-b9a0-ddbd8759e633)
-
-<br>
 
 > ****Analysis:**** Songs in major modes tend to have higher streams and counts than minor ones, suggesting a preference for happier or more uplifting sounds. However, minor-key (somber) songs also maintain substantial popularity.
 
@@ -829,8 +793,6 @@
 ![image](https://github.com/user-attachments/assets/5ba54967-b6e8-4b8f-8733-3159fe064af1)
 ![image](https://github.com/user-attachments/assets/1cd1681e-c79a-44f8-92f6-858cd5bb6f57)
 
-<br>
-
 > ****Analysis:**** The Weeknd ranks highest on Spotify and Apple playlists, though Eminem leads on Deezer and ranks second on Spotify. The Weeknd and Ed Sheeran are the only artists in the top 10 on all three platforms.
 
 <br>
@@ -871,8 +833,6 @@
 ![image](https://github.com/user-attachments/assets/1b4fa689-fc4c-4e92-95de-0ccbb561e883)
 ![image](https://github.com/user-attachments/assets/4681bc1c-4ae2-4099-840e-12d0fbf4687a)
 ![image](https://github.com/user-attachments/assets/9d3ac67f-cbec-48fc-8b87-5b493a002731)
-
-<br>
 
 > ****Analysis:**** The Weeknd and Bad Bunny top multiple charts, with The Weeknd leading on Apple and Shazam, while Bad Bunny leading on Spotify and Deezer. Both artists appear across all platforms, demonstrating their widespread appeal.
 
